@@ -29,7 +29,10 @@ app.use("/api/products" , productRoutes);
 app.use("/api/carts" , cartRoutes);
 app.use("/api/payment" , paymentRoutes);
 app.use("/api/category" , categoryRoutes);
-
+app.get("/", (req, res) => {
+    res.send("API is running...");
+}
+);
 
 const connectDB = async () => {
     try {
