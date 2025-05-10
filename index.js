@@ -4,11 +4,10 @@ const app = express();
 const cors = require('cors');
 const path = require('path'); 
 const seedData =require('./seeds/seed.js');
+const mongoose = require("mongoose");
 
 app.use(express.json());
-
 app.use(cors());
-const mongoose = require("mongoose");
 const error = require("./middleware/error.js");
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
